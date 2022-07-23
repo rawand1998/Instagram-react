@@ -1,5 +1,5 @@
 import React from 'react'
-import Posts from '../../Components/Posts/Posts'
+import PostList from '../../Components/PostList/PostList'
 import Story from '../../Components/Story/Story'
 import ContactStuff from '../../Components/ContactStuff/ContactStuff'
 import './Style.css'
@@ -8,7 +8,7 @@ function Home() {
     <div className="home-container">
         <div className="section">
             <Story />
-            <Posts />
+            <PostList />
         </div>
         <div className="sect">
             <ContactStuff />
