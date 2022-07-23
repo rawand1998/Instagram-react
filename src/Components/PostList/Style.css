@@ -1,0 +1,94 @@
+.postlist{
+    max-width: 600px;
+    margin: 0 auto;
+    background-color:#ffffff;padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border:1px solid rgba(219,219,219,1);
+    box-shadow:  0 1px 2px 0 rgba(0 0 0 / 0.05)
+}
+.postHeader{
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    margin: 5px 5px;
+}
+.social{
+    display:flex;
+    margin :10px 0
+}
+.social svg{
+    
+    padding:3px
+}
+.caption{
+    display:flex;
+    margin :10px 0
+}
+.caption div{
+    display:flex;
+    align-items:center;
+}
+.caption span{
+    font-weight: bold;
+    display:flex;
+    margin-left:5px;
+    color: black;
+}
+.caption p {
+    flex-wrap: wrap;
+    font-size:14px;
+    font-weight: 400;
+    margin-left:10px;
+    line-height:18px;
+    color: rgba(75,85,99,1);
+
+}
+.comment-section
+{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+.comment-section div
+ { 
+margin:0 5px
+
+ }
+ .input-conatiner button{
+    margin: 0 5px;
+    padding: 15px;
+    color: rgba(96,165,250,1);
+    font-weight:bold;
+    border: none;
+    background-color:#ffff
+ }
+.input-conatiner{
+    flex: 1;
+    display:flex;
+    align-items: center;
+
+}
+.input-conatiner input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba(107,114,128,1);
+}
+.input-conatiner input:focus{
+    outline: none;
+}
+.user{
+    display: flex;
+    align-items: center;
+}
+.user span{
+    font-weight:bold;
+    padding-left:15px
+}
+.comment{
+   
+    font-size:20px
+
+}
