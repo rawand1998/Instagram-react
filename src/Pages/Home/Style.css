@@ -1,0 +1,13 @@
+.home-container{
+    display:grid;
+    grid-template-columns: repeat(4,minmax(0,1fr));/* 1 instead 4*/
+}
+.section{
+    grid-column: span 3 / span 3;
+    margin: 0 auto;
+
+}
+.sect{
+    display:inline-grid
+
+}

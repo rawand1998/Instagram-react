@@ -5,7 +5,7 @@ import {
   //   Avatar,
   Search,
 } from "@mui/icons-material";
-import { Button } from "@mui/material";
+
 import Avatar from "@mui/material/Avatar";
 import React from "react";
 import "./Style.css";
@@ -15,7 +15,7 @@ function Header() {
     <div className="header-contanier">
       <div className="wrapper">
         <div className="headerLogo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/2560px-Instagram_logo.svg.png" />
+          <img alt = "not found" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/2560px-Instagram_logo.svg.png" />
         </div>
         <div className="SearchContainer">
           <Search />
