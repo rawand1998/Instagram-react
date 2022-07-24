@@ -5,7 +5,7 @@ import ContactStuff from '../../Components/ContactStuff/ContactStuff'
 import {useDispatch} from 'react-redux'
 import {onAuthStateChanged} from 'firebase/auth'
 import {auth} from '../../firebase/firebase'
-import {setLogIn} from '../../features/User/UserSlice'
+import {setLogIn,setLogOut} from '../../features/User/UserSlice'
 
 import './Style.css'
 function Home() {
@@ -20,7 +20,12 @@ function Home() {
           photo: user.photoURL,
         }))
       }else{
-        console.log("error")
+        dispatch(setLogOut({
+          name:null,
+          email:null,
+          photo:null,
+          uid:null,
+        }))
       }
     
     }))
