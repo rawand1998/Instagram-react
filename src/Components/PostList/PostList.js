@@ -9,7 +9,7 @@ import { selectName, selectPhoto,selectUid } from "../../features/User/UserSlice
 import { FaComment } from "react-icons/fa";
 import { addDoc, collection,query,onSnapshot ,orderBy,doc,setDoc} from "@firebase/firestore";
 import { db } from "../../firebase/firebase";
-import Comments from '../Comments/Comments'
+import Comments from "../Comments/Comments";
 function PostList({ p, name, email, img, avatar, id }) {
   const [input, setInput] = useState('');
   const [comment,setComment] = useState([]);
