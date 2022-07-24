@@ -5,12 +5,35 @@ import {
   //   Avatar,
   Search,
 } from "@mui/icons-material";
-
+import firebase from "firebase/compat/app";
 import Avatar from "@mui/material/Avatar";
 import React from "react";
 import "./Style.css";
+import {useSelector,useDispatch} from 'react-redux'
+import {auth} from '../../firebase/firebase'
+import {setLogIn,selectName,selectPhoto} from '../../features/User/UserSlice'
 function Header() {
-  const username = "xs";
+
+  const username = useSelector(selectName);
+
+  const photo= useSelector(selectPhoto);
+  const dispatch = useDispatch()
+
+  const loginWithGoogle = ()=>{
+    const provider = new firebase.auth.GoogleAuthProvider();
+      auth.signInWithPopup(provider).then((res)=>{
+        const user = res.user
+        console.log(user)
+        console.log(user.photoURL,user.displayName,user.email,user.uid,"========")
+         dispatch(setLogIn({
+          name: user.displayName,
+          email: user.email,
+          uid: user.uid,
+          photo:user.photoURL,
+          
+         }))
+      })
+  }
   return (
     <div className="header-contanier">
       <div className="wrapper">
@@ -37,12 +60,12 @@ function Header() {
                 </li>
                 <li className="List">
                   {" "}
-                  <Avatar />
+                  <Avatar src={photo}/>
                 </li>
               </div>
             </>
           ) : (
-            <button className="buttons">Login</button>
+            <button className="buttons" onClick={loginWithGoogle}>Login</button>
           )}
         </div>
       </div>
