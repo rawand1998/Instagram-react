@@ -7,15 +7,16 @@ import {
 } from "@mui/icons-material";
 import firebase from "firebase/compat/app";
 import Avatar from "@mui/material/Avatar";
-import React from "react";
+import React,{useState} from "react";
 import "./Style.css";
 import {useSelector,useDispatch} from 'react-redux'
 import {auth} from '../../firebase/firebase'
 import {setLogIn,selectName,selectPhoto} from '../../features/User/UserSlice'
+import Post from '../../Pages/Post/Post'
 function Header() {
 
   const username = useSelector(selectName);
-
+const [show,setShow]= useState(false)
   const photo= useSelector(selectPhoto);
   const dispatch = useDispatch()
 
@@ -33,6 +34,11 @@ function Header() {
           
          }))
       })
+  }
+  const showPost = (e)=>{
+    e.preventDefault()
+    setShow(!show)
+    console.log(show)
   }
   return (
     <div className="header-contanier">
@@ -52,8 +58,11 @@ function Header() {
               </li>
               <div className="Down">
                 <li className="List">
-                  <AddCircleOutline />
+                  <AddCircleOutline  onClick={showPost}/>
+                  {show && <Post />}
                 </li>
+              
+
                 <li className="List">
                   {" "}
                   <FavoriteBorderRounded />
@@ -63,9 +72,11 @@ function Header() {
                   <Avatar src={photo}/>
                 </li>
               </div>
+             
             </>
           ) : (
             <button className="buttons" onClick={loginWithGoogle}>Login</button>
+   
           )}
         </div>
       </div>
