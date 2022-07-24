@@ -6,6 +6,7 @@ import {useDispatch} from 'react-redux'
 import {onAuthStateChanged} from 'firebase/auth'
 import {auth} from '../../firebase/firebase'
 import {setLogIn,setLogOut} from '../../features/User/UserSlice'
+import Posts from '../../Components/Posts/Posts'
 
 import './Style.css'
 function Home() {
@@ -34,7 +35,7 @@ function Home() {
     <div className="home-container">
         <div className="section">
             <Story />
-            <PostList />
+            <Posts />
         </div>
         <div className="sect">
             <ContactStuff />

@@ -1,0 +1,33 @@
+.comment-wrapper{
+
+}
+.user-stuff
+{
+    display:flex;
+   
+    height:100%;
+    position: relative;
+    align-items: center;
+    padding-left:15px
+}
+.user-stuff span{
+    margin-left:10px;
+    font-weight: bold;
+    font-size:15px;
+    display:flex;padding: 20px 0;
+   
+}
+.user-stuff p {
+    margin-left:10px;
+    font-size:14px;
+    font-weight: bold;
+    line-height:18px;
+    max-width: 410px;
+    flex-wrap: wrap;
+    color:rgba(75,85,99,1);
+}
+/* div{
+    position: relative;
+    top: 10px;
+    left: 2px;
+} */

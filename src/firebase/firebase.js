@@ -1,7 +1,7 @@
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
-
+import { getStorage } from "firebase/storage";
 const firebaseConfig = firebase.initializeApp({
   apiKey: "AIzaSyAFX9Gydx2AqNMMtAYgA29O3RaeU9lt3D8",
   authDomain: "insta-f173c.firebaseapp.com",
@@ -13,4 +13,5 @@ const firebaseConfig = firebase.initializeApp({
 });
 const db = firebaseConfig.firestore();
 const auth = firebase.auth();
-export { db, auth };
+const storage = getStorage(firebaseConfig);
+export { db, auth,storage };

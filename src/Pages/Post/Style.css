@@ -10,7 +10,7 @@
     justify-content:center;
     transition: transform 150ms ease-out;
     align-items: center;
-
+ 
 }
 .post-warrp{
     max-height: 550px;
@@ -66,4 +66,21 @@ position: relative;
 }
 .inputContainer input:focus{
     outline: none;
+}
+.imageConatiner{
+    width: 100%;
+}
+.imageConatiner img{
+    width: 100%;
+    /* object-fit: contain; */
+}
+.close{
+    position:fixed;top: 10px;
+    color: #f00;
+    cursor: pointer;
+    height:24px;
+    transition: all 150ms ease-out;
+}
+.close:hover{
+    opacity: 0.5;
 }
