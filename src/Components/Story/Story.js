@@ -42,7 +42,8 @@ function Story() {
       },
     ]
     setSelected(suggestion)
-  })
+   
+  },[])
   return (
     <div className="story-conatiner">
     {selected.map((profile)=>
