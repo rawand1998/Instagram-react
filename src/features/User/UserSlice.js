@@ -23,6 +23,7 @@ const UserSlice = createSlice({
         }
     }
 })
+export const {setLogIn,setLogOut} =UserSlice.actions
 export const selectName = (state)=>state.user.name
 export const selectPhoto = (state)=>state.user.photo
 
