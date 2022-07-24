@@ -16,7 +16,8 @@
 }
 .social{
     display:flex;
-    margin :10px 0
+    margin :10px 0;
+    position: relative;
 }
 .social svg{
     
@@ -98,4 +99,22 @@ margin:0 5px
 }
 .post-conatiner img{
     width:50%;
+}
+.comment-display{
+    max-height:110px;
+    margin:20px 0 ;
+    overflow-y: auto;
+}
+.absolute{
+    position: absolute;
+    display:flex;
+    align-items: center;
+    left: 0;
+    right: 0;
+    top: 24px;
+    width: 20vh;
+}
+.absolute p {
+    margin-left: 10px;
+    font-size: small;
 }
