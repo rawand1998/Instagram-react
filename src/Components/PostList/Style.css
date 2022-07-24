@@ -63,7 +63,11 @@ margin:0 5px
     color: rgba(96,165,250,1);
     font-weight:bold;
     border: none;
-    background-color:#ffff
+    background-color:#ffff;
+    cursor: pointer;
+ }
+ .input-conatiner button:hover{
+    background-color:#f00
  }
 .input-conatiner{
     flex: 1;
@@ -91,4 +95,7 @@ margin:0 5px
    
     font-size:20px
 
+}
+.post-conatiner img{
+    width:50%;
 }

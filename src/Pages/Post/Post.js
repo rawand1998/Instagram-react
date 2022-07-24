@@ -7,7 +7,7 @@ import { read } from "fs";
 import {selectName,selectPhoto,selectEmail} from '../../features/User/UserSlice'
 import { serverTimestamp } from "@firebase/firestore";
 import {ref,getDownloadURL,uploadString } from "firebase/storage"
-import {selectBoolean} from '../../features/Bool/boolSlice'
+import {selectBoolean,setBool} from '../../features/Bool/boolSlice'
 import CloseIcon from '@mui/icons-material/Close';
 function Post() {
   const dispatch = useDispatch();
@@ -50,15 +50,17 @@ function Post() {
         const file = await db.collection('insta').add({
             name:name,
             email:email,
-            photo:photo,
+            img:photo,
             caption:input,
             timestamp:serverTimestamp()
         })
         const images = ref(storage,`insta/${file.id}/img`)
         await uploadString(images,selectImage,"data_url").then(async ()=>{
-            const dawnload = await getDownloadURL (images)
-            await db.collection('insta').update({
-                photo:dawnload
+            const dawnload = await getDownloadURL(images)
+            console.log(file.id,"id")
+            await db.collection('insta').doc(file.id).update({
+                photo:dawnload,
+             
             })
         })
         setInput(" ")
@@ -68,9 +70,14 @@ function Post() {
     }
 
   }
+
   return (
-    <div className="post-container" user={bool}>
-        <div className="close">
+    <div>
+    {bool ? (
+        <div className="post-container" user={bool}>
+        <div className="close" onClick={()=>dispatch(setBool({
+        bool:false
+    }))}>
             <CloseIcon />
         </div>
       <div className="post-warrp">
@@ -104,7 +111,13 @@ function Post() {
         </div>
       </div>
     </div>
+    ):(
+        <div></div>
+    )}
+
+</div>
   );
+
 }
 
 export default Post;
