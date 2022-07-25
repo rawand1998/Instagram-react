@@ -24,14 +24,7 @@ const loginWithGoogle = () => {
     .signInWithPopup(provider)
     .then((res) => {
       const user = res.user;
-      console.log(user);
-      console.log(
-        user.photoURL,
-        user.displayName,
-        user.email,
-        user.uid,
-        "========"
-      );
+      console.log(user.photoURL,"url")
       dispatch(
         setLogIn({
           name: user.displayName,
@@ -47,14 +40,16 @@ const loginWithGoogle = () => {
 };
 const login=()=>{
   auth.signInWithEmailAndPassword(email,password).then((userAuth)=>{
-    dispatch(login({
+    console.log(userAuth,"============")
+    dispatch(setLogIn({
       email: userAuth.user.email,
      uid: userAuth.user.uid,
-     displayName: userAuth.user.displayName,
-    // photoUrl: userAuth.user.photoURL,
-
+     name: userAuth.user.displayName,
+     photo:userAuth.user.photoURL
     }))
 
+  }).then(()=>{
+    navigate("/");
   })
 
 }

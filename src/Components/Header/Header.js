@@ -51,7 +51,7 @@ const [show,setShow]= useState(false)
               <div className="Down">
                 <li className="List">
                   <AddCircleOutline  onClick={showPost}/>
-                  {show && <Post />}
+                  {show && <Post show={show} setShow={setShow} />}
                 </li>
               
 
@@ -68,7 +68,7 @@ const [show,setShow]= useState(false)
             </>
           ) : (
             <button className="buttons" onClick={Login} to="login">Login</button>
-            // <Link to="/login">login</Link>
+           
    
           )}
         </div>

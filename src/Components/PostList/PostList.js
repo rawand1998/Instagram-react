@@ -26,7 +26,7 @@ return onSnapshot(
     orderBy("timestamp")
   ),
   (snapshot)=>{
-    console.log(snapshot.docs,"snaphoe")
+ 
     setComment(snapshot.docs)
   }
 )
