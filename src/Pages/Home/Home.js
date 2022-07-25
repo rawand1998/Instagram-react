@@ -8,6 +8,7 @@ import { auth } from "../../firebase/firebase";
 import { setLogIn, setLogOut,selectUid } from "../../features/User/UserSlice";
 import Posts from "../../Components/Posts/Posts";
 import Login from "../../Components/Auth/Login/login";
+import Header from "../../Components/Header/Header";
 import "./Style.css";
 function Home() {
   const dispatch = useDispatch();
@@ -37,8 +38,12 @@ function Home() {
   });
   return (
     <div>
+       
       {user ? (
+        <div>
+        <Header />
         <div className="home-container">
+          
           <div className="section">
             <Story />
             <Posts />
@@ -46,6 +51,7 @@ function Home() {
           <div className="sect">
             <ContactStuff />
           </div>
+        </div>
         </div>
       ) : (
         <Login />
