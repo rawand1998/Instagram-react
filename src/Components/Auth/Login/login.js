@@ -1,8 +1,13 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {auth,db} from '../../../firebase/firebase'
-
-function login() {
+import {useNavigate} from 'react-router-dom'
+function Login() {
+  const nav = useNavigate()
+ 
+const register=()=>{
+nav('/register')
+}
   return (
     <div>
       <div className="logo">
@@ -20,11 +25,11 @@ function login() {
         <a>Forget Your Password</a>
       </div>
       <div>
-        <p>Don`t have a account <Link to="register">Sign up</Link></p>
+        <p>Don`t have a account <a onClick={register}> Sign up</a></p>
       </div>
 
     </div>
   )
 }
 
-export default login
+export default Login

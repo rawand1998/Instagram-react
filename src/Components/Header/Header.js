@@ -22,21 +22,7 @@ const [show,setShow]= useState(false)
   const dispatch = useDispatch()
   const navigate = useNavigate();
   // const navigation = useNavigate();
-  const loginWithGoogle = ()=>{
-    const provider = new firebase.auth.GoogleAuthProvider();
-      auth.signInWithPopup(provider).then((res)=>{
-        const user = res.user
-        console.log(user)
-        console.log(user.photoURL,user.displayName,user.email,user.uid,"========")
-         dispatch(setLogIn({
-          name: user.displayName,
-          email: user.email,
-          uid: user.uid,
-          photo:user.photoURL,
-          
-         }))
-      })
-  }
+
   const Login=()=>{
     navigate('/login')
     // navigate('/login', {replace: true});
