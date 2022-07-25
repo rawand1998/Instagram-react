@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { auth, db } from "../../../firebase/firebase";
 import { useSelector, useDispatch } from "react-redux";
+import './Style.css'
 import {
   setLogIn,
   selectName,
@@ -72,13 +73,20 @@ function Register() {
     });
   };
   return (
-    <div>
+    <div className="register-container">
+      <div className="register">
       <div className="logo">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/2560px-Instagram_logo.svg.png" />
-        <p></p>
+        <p>Sign up to see photos and videos from your friends.</p>
         <button onClick={loginWithGoogle}>Login in with Google</button>
+        <div className="Or">
+          <div className="before-or"></div>
+          <div className="or-word">OR</div>
+          <div className="after-or"></div>
+        </div>
       </div>
-      <div className="form-login">
+     
+      <div className="form-register">
         <input
           placeholder="Phone,number ,username or email"
           value={email}
@@ -111,13 +119,20 @@ function Register() {
         </p>
         <button onClick={register}>Sign up</button>
       </div>
-
-      <div>
+      </div>
+      <div className="register-account">
         <p>
           {" "}
-          Have a account <a onClick={login}>Login</a>
+          Have a account? <a onClick={login}>Login</a>
         </p>
       </div>
+      <div className="app-store">
+    <p>Get the app</p>
+    <div className="img-app">
+    <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReKnbTiSbjFS4GjHahg5eBK2LJaaL_M8yG5xekUYvpaKyciuCUZWzk7V4Bi0IhGRPDYsc&usqp=CAU"/>
+
+    </div>
+  </div>
     </div>
   );
 }

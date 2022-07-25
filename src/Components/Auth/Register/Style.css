@@ -1,0 +1,132 @@
+.register-container{
+    max-width: 350px;
+    justify-content: center;
+    margin-top: 12px;
+    flex-grow: 1;
+    margin-left: 35%;
+    margin-top: 50px;
+}
+.logo {
+    width: 80%;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo img{
+    max-height: 100%;
+    max-width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+   
+}
+.logo p{
+    color: #8e8e8e;
+ 
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0 40px 10px;
+    text-align: center;
+    width: 100%;
+}
+.register{
+    border: 1px solid #dbdbdb;
+    width: 350px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1px;
+    margin: 0 0 10px;
+    padding: 10px 0;
+}
+.logo button{
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 9px;
+    text-align: center;
+    background-color:#0095f6;
+    width: auto;
+    border-radius:4px;
+    border: none;
+    color: #fff;
+    width: 100%;
+    margin-top:15px
+}
+.Or{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top: 10px;
+    width: 100%;
+
+
+}
+.before-or{
+
+    width: 85%;
+    height:1px;
+
+}
+.after-or{
+    background-color: #ccc;
+    width: 85%;
+    height:1px
+}
+.or-word{
+    font-weight:600;
+    color: #8e8e8e;
+    font-size: 13px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+.form-register{
+    align-items:center;
+    display:flex;
+    flex-direction: column;
+    margin-top:15px
+}
+.form-register input{
+    background: rgba(250,250,250,1);
+
+    margin: 0;
+    outline: 0;
+    overflow: hidden;
+    padding: 9px 0 7px 8px;
+    text-overflow: ellipsis;
+    display: inline-block;
+    text-align: start;
+    border: 1px  solid rgb(118, 118, 118);
+
+    margin-top: 5px;
+    width: 250px;
+}
+.form-register p {
+    color: #8e8e8e;
+   
+    font-size: 12px;
+    line-height: 16px;
+    margin: 10px 40px;
+    text-align: center;
+}
+.form-register button{
+    background-color: #0095f6;
+    color: #fff;
+    border: 1px solid transparent;
+    margin-top: 10px;
+    padding: 9px 0 7px 8px;
+    width:80%;
+    margin-bottom: 20px;
+}
+.register-account{
+    border: 1px solid #ccc;
+}
+.register-account a{
+    font-weight: 600;
+    color: #0095f6;
+    cursor: pointer;
+}
