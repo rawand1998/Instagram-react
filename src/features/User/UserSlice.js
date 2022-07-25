@@ -3,7 +3,8 @@ const initialState = {
     name:null,
     photo:null,
     email:null, 
-    uid:null
+    uid:null,
+    user:null
 }
 const UserSlice = createSlice({
     name:"user",
@@ -20,10 +21,21 @@ const UserSlice = createSlice({
             state.photo=null;
             state.email=null;
             state.uid=null;
-        }
+        },
+        setRegisterWithEmail:(state,action)=>{
+             state.email=action.payload.email;
+             state.fullName=action.payload.fullName;
+             state.username=action.payload.username;
+             state.password=action.payload.password;
+             state.uid=action.payload.uid;
+        },
+        login: (state, action) => {
+            state.user = action.payload;
+          },
+    
     }
 })
-export const {setLogIn,setLogOut} =UserSlice.actions
+export const {setLogIn,setLogOut,setRegisterWithEmail,login} =UserSlice.actions
 export const selectName = (state)=>state.user.name
 export const selectPhoto = (state)=>state.user.photo
 
