@@ -2,7 +2,6 @@ import {
   AddCircleOutline,
   FavoriteBorderRounded,
   SendRounded,
-  //   Avatar,
   Search,
 } from "@mui/icons-material";
 import firebase from "firebase/compat/app";
@@ -13,27 +12,20 @@ import {useSelector,useDispatch} from 'react-redux'
 import {auth} from '../../firebase/firebase'
 import {setLogIn,selectName,selectPhoto} from '../../features/User/UserSlice'
 import Post from '../../Pages/Post/Post'
+import {Link} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 function Header() {
 
   const username = useSelector(selectName);
 const [show,setShow]= useState(false)
   const photo= useSelector(selectPhoto);
   const dispatch = useDispatch()
+  const navigate = useNavigate();
+  // const navigation = useNavigate();
 
-  const loginWithGoogle = ()=>{
-    const provider = new firebase.auth.GoogleAuthProvider();
-      auth.signInWithPopup(provider).then((res)=>{
-        const user = res.user
-        console.log(user)
-        console.log(user.photoURL,user.displayName,user.email,user.uid,"========")
-         dispatch(setLogIn({
-          name: user.displayName,
-          email: user.email,
-          uid: user.uid,
-          photo:user.photoURL,
-          
-         }))
-      })
+  const Login=()=>{
+    navigate('/login')
+    // navigate('/login', {replace: true});
   }
   const showPost = (e)=>{
     e.preventDefault()
@@ -59,7 +51,7 @@ const [show,setShow]= useState(false)
               <div className="Down">
                 <li className="List">
                   <AddCircleOutline  onClick={showPost}/>
-                  {show && <Post />}
+                  {show && <Post show={show} setShow={setShow} />}
                 </li>
               
 
@@ -75,7 +67,8 @@ const [show,setShow]= useState(false)
              
             </>
           ) : (
-            <button className="buttons" onClick={loginWithGoogle}>Login</button>
+            <button className="buttons" onClick={Login} to="login">Login</button>
+           
    
           )}
         </div>

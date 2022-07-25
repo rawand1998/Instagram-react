@@ -9,7 +9,7 @@ import { serverTimestamp } from "@firebase/firestore";
 import {ref,getDownloadURL,uploadString } from "firebase/storage"
 import {selectBoolean,setBool} from '../../features/Bool/boolSlice'
 import CloseIcon from '@mui/icons-material/Close';
-function Post() {
+function Post({show,setShow}) {
   const dispatch = useDispatch();
   const selectedImage = useRef(null);
   const [selectImage, setSelectImage] = useState(null);
@@ -77,7 +77,9 @@ function Post() {
         <div className="post-container" user={bool}>
         <div className="close" onClick={()=>dispatch(setBool({
         bool:false
-    }))}>
+    }))
+  
+    }>
             <CloseIcon />
         </div>
       <div className="post-warrp">
