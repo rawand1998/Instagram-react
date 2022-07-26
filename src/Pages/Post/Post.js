@@ -1,15 +1,17 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState,useContext } from "react";
 import CollectionsIcon from "@mui/icons-material/Collections";
 import { useDispatch,useSelector } from "react-redux";
 import "./Style.css";
 import {db,storage} from '../../firebase/firebase'
 import { read } from "fs";
-import {selectName,selectPhoto,selectEmail} from '../../features/User/UserSlice'
+import {selectName,selectPhoto,selectEmail,selectUid} from '../../features/User/UserSlice'
 import { serverTimestamp } from "@firebase/firestore";
 import {ref,getDownloadURL,uploadString } from "firebase/storage"
 import {selectBoolean,setBool} from '../../features/Bool/boolSlice'
 import CloseIcon from '@mui/icons-material/Close';
-function Post({show,setShow}) {
+import {AuthContext} from '../../Context/Auth'
+
+function Post() {
   const dispatch = useDispatch();
   const selectedImage = useRef(null);
   const [selectImage, setSelectImage] = useState(null);
@@ -19,6 +21,8 @@ function Post({show,setShow}) {
   const photo = useSelector(selectPhoto)
   const email = useSelector(selectEmail)
   const bool = useSelector(selectBoolean)
+  const uid = useSelector(selectUid)
+  console.log(uid,"uid")
   const ImageStuff = (e) => {
     var file = e.target.files[0];
     var reader = new FileReader();
@@ -52,7 +56,8 @@ function Post({show,setShow}) {
             email:email,
             img:photo,
             caption:input,
-            timestamp:serverTimestamp()
+            timestamp:serverTimestamp(),
+            uid:uid
         })
         const images = ref(storage,`insta/${file.id}/img`)
         await uploadString(images,selectImage,"data_url").then(async ()=>{
