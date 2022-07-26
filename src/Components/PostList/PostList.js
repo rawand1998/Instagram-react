@@ -87,8 +87,8 @@ function PostList({ p, name, email, img, avatar, id,uid }) {
     <div className="postlist">
       <div className="postHeader">
         <div className="user">
-          <Avatar src={avatar} alt="post" className="user-img" />
-          <span onClick={()=>porfilePage(uid)}>{name}</span>
+          <Avatar src={avatar} alt="post" className="user-img" onClick={()=>porfilePage(uid)}/>
+          <span onClick={()=>porfilePage(uid)} className="name">{name}</span>
         </div>
         <MoreHorizIcon />
       </div>

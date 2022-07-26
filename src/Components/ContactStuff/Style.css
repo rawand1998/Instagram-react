@@ -1,23 +1,30 @@
 .contact-conatiner{
-    width: 400px;
+    width: 500px;
     border-radius:20px;
-    /* background-color:rgb(185, 0, 0); */
+  
     border: 1px soild #ff0;
-    height:500px;
+    height:300px;
     top: 4rem;
     right:10px;
-    position:fixed
+    /* position:fixed */
+    margin-left:-40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .contact-warrp{
     display:flex;
     align-items:center;
-    justify-content:space-between;
+    justify-content:space-around;
     margin: 15px;
-    margin-top:20px
+    margin-top:20px;
+   
+    width: 100%;
 }
 .contact-user{
     display:flex;
     align-items:center;
+ 
 }
 .contact-user span{
     font-weight:400;
@@ -31,4 +38,87 @@
 .username-contact{
     color: #262626;
     font-size:16px
+}
+.suggestion-people{
+display:flex;
+flex-direction: column;
+align-items:center;
+}
+
+.suggestion-people div img{
+    width: 40px;
+    height:40px;
+    border: 1px solid #ccc;
+    border-radius:50%;
+}
+.suggestion-nav{
+    display: flex;
+    align-items:center;
+    justify-content:space-around;
+    width: 100%;
+
+}
+.suggestion{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+   
+}
+.suggestion-follow{
+    display: flex;
+    align-items:center;
+    justify-content:space-around;
+    width: 100%;
+  
+    margin-left: 40px;
+    margin-right: 35px;
+  padding-top:5px
+}
+.suggestion-img{
+    display: flex;
+    align-items:center;
+    margin-top: 10px;
+}
+.suggestion-followers{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    margin-left: 10px;
+}
+.followers{
+    font-size:12px;
+    color: #ccc;
+}
+.suggestion-word{
+    color: #8E8E8E;
+    font-weight: 600;
+    font-size: 15px;
+}
+.suggestion-seeAll{
+    font-size:14px
+}
+.follow
+{
+    font-size:14px;
+    color: #0095f6;
+    font-weight: 600;
+}
+.suggestion-follow-div{
+
+    margin-left:-25%
+}
+.switch{
+    font-size:14px;
+    color: #0095f6;
+    font-weight: 600;
+    cursor: pointer;
+}
+.drop{
+    background-color: #fff !important;
+    border: none !important;
+    height:50px
+}
+.drop:focus{
+    border: none !important;
 }

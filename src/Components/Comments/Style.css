@@ -25,6 +25,7 @@
     max-width: 410px;
     flex-wrap: wrap;
     color:rgba(75,85,99,1);
+   padding-top:15px
 }
 /* div{
     position: relative;

@@ -1,47 +1,62 @@
 import {
   AddCircleOutline,
   FavoriteBorderRounded,
-  SendRounded,
   Search,
 } from "@mui/icons-material";
 import firebase from "firebase/compat/app";
 import Avatar from "@mui/material/Avatar";
-import React,{useState} from "react";
+import React, { useState } from "react";
 import "./Style.css";
-import {useSelector,useDispatch} from 'react-redux'
-import {auth} from '../../firebase/firebase'
-import {setLogIn,selectName,selectPhoto,selectUid} from '../../features/User/UserSlice'
-import Post from '../../Pages/Post/Post'
-import {Link} from 'react-router-dom'
-import {useNavigate} from 'react-router-dom'
+import { useSelector, useDispatch } from "react-redux";
+import { auth } from "../../firebase/firebase";
+import '@coreui/coreui/dist/css/coreui.min.css'
+import {
+  setLogOut,
+  selectName,
+  selectPhoto,
+  selectUid,
+} from "../../features/User/UserSlice";
+import Post from "../../Pages/Post/Post";
+import { useNavigate } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
-function Header() {
+import { CDropdown,CDropdownToggle,CDropdownMenu,CDropdownItem } from '@coreui/react';
 
+function Header() {
   const username = useSelector(selectName);
-const [show,setShow]= useState(false)
-  const photo= useSelector(selectPhoto);
-  const dispatch = useDispatch()
+  const [show, setShow] = useState(false);
+  const photo = useSelector(selectPhoto);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
-  // const navigation = useNavigate();
-const userid=useSelector(selectUid)
-  const Login=()=>{
-    navigate('/login')
-    // navigate('/login', {replace: true});
-  }
-  const showPost = (e)=>{
-    e.preventDefault()
-    setShow(!show)
-    console.log(show)
-  }
-  const porfilePage = ()=>{
-    
-    navigate(`/profile/${userid}`)
+  const userid = useSelector(selectUid);
+  const name = useSelector(selectName)
+
+
+  const showPost = (e) => {
+    e.preventDefault();
+    setShow(!show);
+    console.log(show);
+  };
+  const porfilePage = () => {
+    navigate(`/profile/${userid}`);
+  };
+  const logout = ()=>{
+    auth.signOut().then((res)=>{
+      dispatch(setLogOut({
+        name:null,
+        email:null,
+        photo:null,
+        uid:null,
+      }))
+    })
   }
   return (
     <div className="header-contanier">
       <div className="wrapper">
         <div className="headerLogo">
-          <img alt = "not found"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/2560px-Instagram_logo.svg.png" />
+          <img
+            alt="not found"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/2560px-Instagram_logo.svg.png"
+          />
         </div>
         <div className="SearchContainer">
           <Search />
@@ -55,26 +70,37 @@ const userid=useSelector(selectUid)
               </li>
               <div className="Down">
                 <li className="List">
-                  <AddCircleOutline  onClick={showPost}/>
+                  <AddCircleOutline onClick={showPost} />
                   {show && <Post show={show} setShow={setShow} />}
                 </li>
-              
 
                 <li className="List">
                   {" "}
                   <FavoriteBorderRounded />
                 </li>
-                <li className="List">
-                  {" "}
-                  <Avatar src={photo} onClick={porfilePage} className="user-img"/>
-                </li>
+                <div className="List">
+                  {/* {" "}
+                  <Avatar src={photo} onClick={porfilePage} className="user-img"/> */}
+                  <CDropdown>
+                    <CDropdownToggle className="drop">
+                    <Avatar src={photo} onClick={porfilePage} className="user-img"/> 
+                    {/* dop */}
+                    </CDropdownToggle>
+                    <CDropdownMenu>
+                      <CDropdownItem href="#" onClick={porfilePage} className="">Profile</CDropdownItem>
+                      <CDropdownItem href="#">Another action</CDropdownItem>
+                      <CDropdownItem href="#" onClick={logout} className="">
+                      Logout
+                      </CDropdownItem>
+                    </CDropdownMenu>
+                  </CDropdown>
+                </div>
               </div>
-             
             </>
           ) : (
-            <button className="buttons" onClick={Login} to="login">Login</button>
-           
-   
+            <button className="buttons"  to="login">
+              Login
+            </button>
           )}
         </div>
       </div>

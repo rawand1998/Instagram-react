@@ -8,6 +8,7 @@
     border:1px solid rgba(219,219,219,1);
     box-shadow:  0 1px 2px 0 rgba(0 0 0 / 0.05);
     margin-top: 15px;
+    border-radius: 4px;
 }
 .postHeader{
     display:flex;
@@ -27,7 +28,8 @@
 }
 .caption{
     display:flex;
-    margin :10px 0
+    margin :10px 0;
+    align-items: center;
 }
 .caption div{
     display:flex;
@@ -46,6 +48,7 @@
     margin-left:10px;
     line-height:18px;
     color: rgba(75,85,99,1);
+    padding-top:15px
 
 }
 .comment-section
@@ -113,12 +116,15 @@ margin:0 5px
     align-items: center;
     left: 0;
     right: 0;
-    top: 24px;
+    top: 12px;
     width: 20vh;
 }
 .absolute p {
     margin-left: 10px;
     font-size: small;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
 }
 .user-img{
     border: 1px solid #ccc;
@@ -132,4 +138,6 @@ margin:0 5px
 .post-conatiner img{
     width: 100%;
 }
-
+.name{
+    cursor: pointer;
+}
