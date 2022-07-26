@@ -120,3 +120,7 @@ margin:0 5px
     margin-left: 10px;
     font-size: small;
 }
+.user-img{
+    border: 1px solid #ccc;
+    border-radius:50%
+}

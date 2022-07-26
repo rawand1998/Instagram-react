@@ -24,7 +24,7 @@ function ContactStuff() {
       <div className="contact-warrp">
 
         <div className="contact-user">
-          <Avatar src={photo} />
+          <Avatar src={photo} className="user-img"/>
           <span>welcome  {name}</span>
         </div>
         <div onClick={logout}>Logout</div>

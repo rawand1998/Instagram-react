@@ -65,7 +65,7 @@ const userid=useSelector(selectUid)
                 </li>
                 <li className="List">
                   {" "}
-                  <Avatar src={photo} onClick={porfilePage}/>
+                  <Avatar src={photo} onClick={porfilePage} className="user-img"/>
                 </li>
               </div>
              

@@ -23,3 +23,8 @@
     font-weight:400;
     padding-left: 5px;
 }
+.user-img{
+    border: 1px solid #ccc;
+    border-radius:50%;
+    background-size: contain;
+}
