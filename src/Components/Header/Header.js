@@ -36,9 +36,15 @@ function Header() {
     setShow(!show);
     console.log(show);
   };
+  const login = ()=>{
+    navigate('/login');
+  }
   const porfilePage = () => {
     navigate(`/profile/${userid}`);
   };
+  const home=()=>{
+    navigate('/');
+  }
   const logout = ()=>{
     auth.signOut().then((res)=>{
       dispatch(setLogOut({
@@ -66,7 +72,7 @@ function Header() {
           {username ? (
             <>
               <li className="List">
-                <FaHome className="rotate" />
+                <FaHome className="rotate" onClick={home}/>
               </li>
               <div className="Down">
                 <li className="List">
@@ -98,7 +104,7 @@ function Header() {
               </div>
             </>
           ) : (
-            <button className="buttons"  to="login">
+            <button className="buttons" onClick={login}>
               Login
             </button>
           )}

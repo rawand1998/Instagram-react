@@ -1,0 +1,45 @@
+.profile-container{
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    width: 700px;
+    margin-left:22%;
+    margin-top:50px
+ 
+}
+.user-image-profile img{
+    width:150px; 
+    height:150px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+.profile-name{
+    display: flex;
+    justify-content:space-evenly
+}
+.profile-name button{
+    border: 1px solid #ccc;
+    background-color:#FAFAFA;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.profile-follower-number{
+    display: flex;
+    justify-content:space-evenly;
+ 
+    width: 400px;
+    margin-top: 15px;
+}
+.profile-data{
+    display: flex;
+    flex-direction: column;
+ justify-content:space-evenly
+}
+.profile-bio{
+    margin-left: 10%;
+    padding-top: 15px;
+}
+.profile-bio span{
+    font-weight: bold;
+}

@@ -24,7 +24,7 @@ function Profile() {
     <div>
       <Header />
       <div className="profile-container">
-         <div> <img src={photo} /> </div>
+         <div className="user-image-profile"> <img src={photo} /> </div>
          <div className="profile-data">
           <div className="profile-name">
           <span>{name}</span>
@@ -32,12 +32,12 @@ function Profile() {
             <SettingsIcon />
             </div>
             <div className="profile-follower-number">
-                <span>45 post</span>
-                <span>200 followers</span>
-                <span>1000 following</span>
+                <span><strong>45</strong> post</span>
+                <span><strong>200</strong> followers</span>
+                <span><strong>1000</strong> following</span>
             </div>
             <div className="profile-bio">
-              <span>{name}</span>
+              <span >{name}</span>
               <p>Computer Engineering ♥️</p>
               <p>الله سينقذك كما يفعل كل مرة 🤍</p>
             </div>
