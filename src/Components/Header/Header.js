@@ -83,12 +83,12 @@ function Header() {
                   <Avatar src={photo} onClick={porfilePage} className="user-img"/> */}
                   <CDropdown>
                     <CDropdownToggle className="drop">
-                    <Avatar src={photo} onClick={porfilePage} className="user-img"/> 
+                    <Avatar src={photo}  className="user-img"/> 
                     {/* dop */}
                     </CDropdownToggle>
                     <CDropdownMenu>
                       <CDropdownItem href="#" onClick={porfilePage} className="">Profile</CDropdownItem>
-                      <CDropdownItem href="#">Another action</CDropdownItem>
+                      <CDropdownItem href="#">Settings</CDropdownItem>
                       <CDropdownItem href="#" onClick={logout} className="">
                       Logout
                       </CDropdownItem>

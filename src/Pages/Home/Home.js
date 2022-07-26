@@ -38,10 +38,10 @@ function Home() {
   });
   return (
     <div>
-       
+             <Header />
       {user ? (
         <div>
-        <Header />
+  
         <div className="home-container">
           
           <div className="section">

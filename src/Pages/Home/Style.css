@@ -1,6 +1,7 @@
 .home-container{
     display:grid;
     grid-template-columns: repeat(4,minmax(0,1fr));/* 1 instead 4*/
+    background-color: rgba(0, 0, 0, 0.02);
 }
 .section{
     grid-column: 1 /  span 3;
