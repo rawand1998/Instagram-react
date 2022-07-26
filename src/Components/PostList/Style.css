@@ -124,3 +124,12 @@ margin:0 5px
     border: 1px solid #ccc;
     border-radius:50%
 }
+.post-image{
+    width: 100%;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+}
+.post-conatiner img{
+    width: 100%;
+}
+

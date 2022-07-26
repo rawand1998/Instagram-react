@@ -14,6 +14,7 @@ import {setLogIn,selectName,selectPhoto,selectUid} from '../../features/User/Use
 import Post from '../../Pages/Post/Post'
 import {Link} from 'react-router-dom'
 import {useNavigate} from 'react-router-dom'
+import { FaHome } from "react-icons/fa";
 function Header() {
 
   const username = useSelector(selectName);
@@ -50,7 +51,7 @@ const userid=useSelector(selectUid)
           {username ? (
             <>
               <li className="List">
-                <SendRounded className="rotate" />
+                <FaHome className="rotate" />
               </li>
               <div className="Down">
                 <li className="List">

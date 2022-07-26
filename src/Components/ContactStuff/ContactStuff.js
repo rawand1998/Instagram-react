@@ -25,7 +25,7 @@ function ContactStuff() {
 
         <div className="contact-user">
           <Avatar src={photo} className="user-img"/>
-          <span>welcome  {name}</span>
+          <span className="username-contact">  {name}</span>
         </div>
         <div onClick={logout}>Logout</div>
       </div>

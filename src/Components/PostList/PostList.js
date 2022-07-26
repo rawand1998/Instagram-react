@@ -93,7 +93,7 @@ function PostList({ p, name, email, img, avatar, id,uid }) {
         <MoreHorizIcon />
       </div>
       <div className="post-conatiner">
-        <img loading="lazy" alt="post" src={img} />
+        <img loading="lazy" alt="post" src={img} className="post-image" />
       </div>
       <div className="social">
         {!liked ? (
