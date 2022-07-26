@@ -7,6 +7,7 @@ function Posts() {
         db.collection('insta').onSnapshot((snapshot) =>{
             
             setPosts(snapshot.docs)
+            console.log(snapshot.docs.map(doc => doc.data()))
         })
     },[]
     )
@@ -14,7 +15,7 @@ function Posts() {
     <div>
         {posts.map((post) =>
           <PostList key={post?.id} p={post?.data().caption} name={post.data().name}
-          avatar={post.data().img} email={post.data().email} id={post.id} img={post.data().photo}
+          avatar={post.data().img} email={post.data().email} id={post.id} img={post.data().photo} uid={post.data().uid}
           />
         )}
       

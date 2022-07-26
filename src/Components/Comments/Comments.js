@@ -2,7 +2,7 @@ import React ,{useState}from 'react'
 import './Style.css'
 import Avatar from "@mui/material/Avatar";
 function Comments({comment,name,avatar,id}) {
-    console.log(comment,"comment")
+ 
     const [comments,setComments] = useState(false)
     const commentInput = comments? comment.slice(" ","100") : comment;
   return (
