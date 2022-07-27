@@ -88,7 +88,7 @@ function Header() {
                 </li>
                 <li className="List">
                   {" "}
-                  <FaComment className="nav-icon"/>
+                  <FaComment className="nav-icon comment-nav"/>
                 </li>
                 <li className="List">
                   {" "}
