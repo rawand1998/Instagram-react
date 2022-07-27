@@ -113,10 +113,15 @@
 .account{
     border: 1px solid #ccc;
 }
-.account a{
+.auth-word{
     font-weight: 600;
     color: #0095f6;
     cursor: pointer;
+    text-decoration:none
+}
+.account p{
+    text-align: center;
+    padding-top: 15px;
 }
 .img-app{
     display: flex;
@@ -126,5 +131,6 @@
 }
 .app-store p{
     margin: 10px 20px 10px 20px;
-    padding-top:10px
+    padding-top:10px;
+    text-align:center;
 }

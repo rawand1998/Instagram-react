@@ -114,7 +114,7 @@ function Register() {
       <div className="register-account">
         <p>
           {" "}
-          Have a account? <a onClick={login}>Login</a>
+          Have a account? <a onClick={login} className="auth-word">Login</a>
         </p>
       </div>
       <div className="app-store">

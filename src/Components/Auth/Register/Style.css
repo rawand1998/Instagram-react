@@ -125,8 +125,12 @@
 .register-account{
     border: 1px solid #ccc;
 }
-.register-account a{
+.auth-word a{
     font-weight: 600;
     color: #0095f6;
     cursor: pointer;
+}
+.register-account p{
+    text-align: center;
+    padding-top: 15px;
 }
