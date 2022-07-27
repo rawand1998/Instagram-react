@@ -10,6 +10,9 @@ import "./Style.css";
 import { useSelector, useDispatch } from "react-redux";
 import { auth } from "../../firebase/firebase";
 import '@coreui/coreui/dist/css/coreui.min.css'
+import {FaRegBookmark,FaUserCircle,FaComment} from "react-icons/fa";
+import SettingsIcon from '@mui/icons-material/Settings';
+import ExploreSharpIcon from '@mui/icons-material/ExploreSharp';
 import {
   setLogOut,
   selectName,
@@ -72,30 +75,39 @@ function Header() {
           {username ? (
             <>
               <li className="List">
-                <FaHome className="rotate" onClick={home}/>
+                <FaHome className="rotate nav-icon" onClick={home}/>
               </li>
               <div className="Down">
                 <li className="List">
                   <AddCircleOutline onClick={showPost} />
                   {show && <Post show={show} setShow={setShow} />}
                 </li>
-
                 <li className="List">
                   {" "}
-                  <FavoriteBorderRounded />
+                  <ExploreSharpIcon className="nav-icon"/>
+                </li>
+                <li className="List">
+                  {" "}
+                  <FaComment className="nav-icon"/>
+                </li>
+                <li className="List">
+                  {" "}
+                  <FavoriteBorderRounded className="nav-icon"/>
                 </li>
                 <div className="List">
                   {/* {" "}
                   <Avatar src={photo} onClick={porfilePage} className="user-img"/> */}
-                  <CDropdown>
+                  <CDropdown className="dropdown">
                     <CDropdownToggle className="drop">
                     <Avatar src={photo}  className="user-img"/> 
                     {/* dop */}
                     </CDropdownToggle>
-                    <CDropdownMenu>
-                      <CDropdownItem href="#" onClick={porfilePage} className="">Profile</CDropdownItem>
-                      <CDropdownItem href="#">Settings</CDropdownItem>
-                      <CDropdownItem href="#" onClick={logout} className="">
+                    <CDropdownMenu className="CDropdownMenu">
+                      <CDropdownItem className ="CDropdownItem" onClick={porfilePage} ><FaUserCircle className="icon"/>Profile</CDropdownItem>
+                      <CDropdownItem className ="CDropdownItem"><SettingsIcon className="icon"/>Settings</CDropdownItem>
+                      <CDropdownItem className ="CDropdownItem"><FaRegBookmark className="icon" />Saved</CDropdownItem>
+                      <CDropdownItem className ="CDropdownItem switch-menu">Switch account</CDropdownItem>
+                      <CDropdownItem className ="CDropdownItem logout-menu" onClick={logout}>
                       Logout
                       </CDropdownItem>
                     </CDropdownMenu>

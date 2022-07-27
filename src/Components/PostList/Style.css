@@ -160,3 +160,6 @@ margin:0 5px
     cursor: pointer;
     background-color:#fff;
 }
+.loved:hover{
+    color:#f00
+}

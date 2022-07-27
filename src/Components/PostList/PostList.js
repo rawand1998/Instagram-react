@@ -97,7 +97,7 @@ function PostList({ p, name, email, img, avatar, id,uid }) {
       </div>
       <div className="social">
         {!liked ? (
-          <FavoriteBorderRounded onClick={Post} />
+          <FavoriteBorderRounded onClick={Post} className="loved" />
         ) : (
           <FavoriteBorderRounded style={{ color: "red" }} onClick={Post} />
         )}
