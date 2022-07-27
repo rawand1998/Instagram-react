@@ -6,6 +6,7 @@ import { db } from "../../firebase/firebase";
 import Header from "../../Components/Header/Header";
 import { useParams } from "react-router-dom";
 import SettingsIcon from '@mui/icons-material/Settings';
+import {FaRegBookmark,FaCamera,FaUserCircle,FaTh} from "react-icons/fa";
 import './Style.css'
 function Profile() {
   const UserId = useParams();
@@ -47,9 +48,17 @@ function Profile() {
         <div className="profile-highlight">
           <img  src={img}/>
          </div>
+         <div className="posts-navbar">
+          <span><FaTh />POSTS</span>
+          <span><FaCamera />REELS</span>
+          <span><FaRegBookmark />SAVED</span>
+          <span><FaUserCircle />TAGGED</span>
+         </div>
       {profileData.map((profileData) => (
 
-        <div></div>
+        <div>
+
+        </div>
       ))}
     </div>
   );
