@@ -53,17 +53,6 @@ function PostList({ p, name, email, img, avatar, id,uid }) {
         timestamp: serverTimestamp(),
       });
     }
-
-    // console.log(input,"input")
-    // db.collection('comment').add({
-
-    //   name: userName,
-    //   comment: input,
-    //   photo: photo,
-    //   timestamp: serverTimestamp(),
-    // })
-    // setInput("");
-    // setLoading(false);
   };
   useEffect(() => {
     return onSnapshot(collection(db, "insta", id, "likes"), (snapshot) => {
@@ -87,17 +76,17 @@ function PostList({ p, name, email, img, avatar, id,uid }) {
     <div className="postlist">
       <div className="postHeader">
         <div className="user">
-          <Avatar src={avatar} alt="post" />
-          <span onClick={()=>porfilePage(uid)}>{name}</span>
+          <Avatar src={avatar} alt="post" className="user-img" onClick={()=>porfilePage(uid)}/>
+          <span onClick={()=>porfilePage(uid)} className="name">{name}</span>
         </div>
         <MoreHorizIcon />
       </div>
       <div className="post-conatiner">
-        <img loading="lazy" alt="post" src={img} />
+        <img loading="lazy" alt="post" src={img} className="post-image" />
       </div>
       <div className="social">
         {!liked ? (
-          <FavoriteBorderRounded onClick={Post} />
+          <FavoriteBorderRounded onClick={Post} className="loved" />
         ) : (
           <FavoriteBorderRounded style={{ color: "red" }} onClick={Post} />
         )}

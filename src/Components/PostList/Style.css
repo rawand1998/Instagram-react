@@ -8,36 +8,44 @@
     border:1px solid rgba(219,219,219,1);
     box-shadow:  0 1px 2px 0 rgba(0 0 0 / 0.05);
     margin-top: 15px;
+    border-radius: 4px;
+  
 }
 .postHeader{
     display:flex;
     align-items: center;
     justify-content:space-between;
     margin: 5px 5px;
-   
+    background-color:#fff;
 }
 .social{
     display:flex;
     margin :10px 0;
     position: relative;
+    background-color:#fff;
 }
 .social svg{
-    
-    padding:3px
+    background-color:#fff;
+    padding:3px;
 }
 .caption{
     display:flex;
-    margin :10px 0
+    margin :10px 0;
+    align-items: center;
+    background-color:#fff;
+    padding-top: 25px;
 }
 .caption div{
     display:flex;
     align-items:center;
+    background-color:#fff;
 }
 .caption span{
     font-weight: bold;
     display:flex;
     margin-left:5px;
     color: black;
+    background-color:#fff;
 }
 .caption p {
     flex-wrap: wrap;
@@ -46,6 +54,8 @@
     margin-left:10px;
     line-height:18px;
     color: rgba(75,85,99,1);
+    padding-top:15px;
+    background-color:#fff;
 
 }
 .comment-section
@@ -54,6 +64,7 @@
     align-items:center;
     justify-content: space-between;
     margin: 5px 0;
+    background-color:#fff;
 }
 .comment-section div
  { 
@@ -76,12 +87,14 @@ margin:0 5px
     flex: 1;
     display:flex;
     align-items: center;
+    background-color:#fff;
 
 }
 .input-conatiner input{
     width: 100%;
     border: none;
     border-bottom: 1px solid rgba(107,114,128,1);
+    background-color:#fff;
 }
 .input-conatiner input:focus{
     outline: none;
@@ -89,6 +102,7 @@ margin:0 5px
 .user{
     display: flex;
     align-items: center;
+    background-color:#fff;
 }
 .user span{
     font-weight:bold;
@@ -96,11 +110,15 @@ margin:0 5px
 }
 .comment{
    
-    font-size:20px
+    font-size:25px;
+  
+   
 
 }
 .post-conatiner img{
     width:50%;
+    background-size: cover;
+    background-color: #fff;
 }
 .comment-display{
     max-height:110px;
@@ -113,10 +131,35 @@ margin:0 5px
     align-items: center;
     left: 0;
     right: 0;
-    top: 24px;
+    top: 22px;
     width: 20vh;
+    background-color:#fff;
 }
 .absolute p {
     margin-left: 10px;
     font-size: small;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    background-color:#fff;
+}
+.user-img{
+    border: 1px solid #ccc;
+    border-radius:50%
+}
+.post-image{
+    width: 100%;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+}
+.post-conatiner img{
+    width: 100%;
+    background-size: contain;
+}
+.name{
+    cursor: pointer;
+    background-color:#fff;
+}
+.loved:hover{
+    color:#f00
 }

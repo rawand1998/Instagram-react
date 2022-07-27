@@ -1,6 +1,7 @@
 import React from 'react'
 
-function Stories() {
+function Stories({selected}) {
+  console.log(selected)
   return (
     <div>Stories</div>
   )
