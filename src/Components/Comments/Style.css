@@ -45,3 +45,8 @@ background-color:#fff;
     top: 10px;
     left: 2px;
 } */
+
+.avatar-comment{
+    background-size:contain;
+    width:100%
+}

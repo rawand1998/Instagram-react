@@ -13,7 +13,7 @@ function Comments({comment,name,avatar,id}) {
   return (
     <div className="comment-wrapper">
         <div className="user-stuff">
-            <Avatar src={avatar} />
+            <Avatar src={avatar} className="avatar-comment"/>
             <span>{name}</span>
             {commentInput.length >=90 ? (
                 <>

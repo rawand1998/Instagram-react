@@ -80,7 +80,7 @@ const login=()=>{
       </div>
       </div>
       <div className="account">
-        <p>Don`t have a account? <a onClick={register}> Sign up</a></p>
+        <p>Don`t have a account? <a onClick={register} className="auth-word"> Sign up</a></p>
       </div>
   <div className="app-store">
     <p>Get the app</p>
