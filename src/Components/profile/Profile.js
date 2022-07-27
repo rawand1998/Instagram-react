@@ -6,13 +6,16 @@ import { db } from "../../firebase/firebase";
 import Header from "../../Components/Header/Header";
 import { useParams } from "react-router-dom";
 import SettingsIcon from '@mui/icons-material/Settings';
-import {FaRegBookmark,FaCamera,FaUserCircle,FaTh} from "react-icons/fa";
+import {FaRegBookmark,FaCamera,FaUserCircle,FaTh, FaLessThanEqual} from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import './Style.css'
 function Profile() {
   const UserId = useParams();
   const [profileData, setProfileData] = useState([]);
   const name = useSelector(selectName);
   const photo = useSelector(selectPhoto);
+  const [show,setShow]=useState(FaLessThanEqual);
+  const navigate = useNavigate();
   useEffect(() => {
     db.collection("insta")
       .where("uid", "==", UserId.id)
@@ -20,6 +23,12 @@ function Profile() {
         setProfileData(snapshot.docs);
       });
   }, []);
+  const SinglePost = (id)=>{
+    console.log("id",id)
+    navigate(`/single/${id}`)
+    setShow(true);
+
+  }
   console.log(profileData);
   return (
     <div>
@@ -59,7 +68,7 @@ function Profile() {
 
         <div>
           <div>
-            <img src={profileData.data().photo}/>
+            <img src={profileData.data().photo} onClick={()=>SinglePost(profileData.id)}/>
           </div>
       
         </div>

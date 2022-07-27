@@ -1,0 +1,58 @@
+.singlePage-container{
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    width: 96%;
+    border: 1px solid #ccc;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.singlePage-image {
+    width:50%
+}
+.singlePage-image img{
+    width:80%
+}
+.singlePage-info{
+    width: 50%;
+    background-color: #fff;
+    /* height:100vh */
+}
+.singlePage-info img{
+ width: 50px;
+ height:50px;
+ border-radius:50%;
+ margin-left: 15px;
+}
+.single-info{
+    width: 100%;
+    background-color: #fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center
+}
+.info{
+    background-color: #fff;
+    margin-top:15px
+}
+.info span{
+    padding-left:10px;
+    background-color: #fff;
+    font-size:25xp;
+    font-weight:bold
+}
+.moreHorizanIcon{
+    background-color: #fff;
+    margin-right: 10px;
+}
+
+.single-comment
+{
+    /* margin-top:40% */
+}
+.soical-single{
+border-top: 1px solid #ccc;
+margin-top:40%
+}

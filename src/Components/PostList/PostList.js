@@ -53,17 +53,6 @@ function PostList({ p, name, email, img, avatar, id,uid }) {
         timestamp: serverTimestamp(),
       });
     }
-
-    // console.log(input,"input")
-    // db.collection('comment').add({
-
-    //   name: userName,
-    //   comment: input,
-    //   photo: photo,
-    //   timestamp: serverTimestamp(),
-    // })
-    // setInput("");
-    // setLoading(false);
   };
   useEffect(() => {
     return onSnapshot(collection(db, "insta", id, "likes"), (snapshot) => {
