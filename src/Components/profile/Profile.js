@@ -54,12 +54,17 @@ function Profile() {
           <span><FaRegBookmark />SAVED</span>
           <span><FaUserCircle />TAGGED</span>
          </div>
+         <div  className="profile-content">
       {profileData.map((profileData) => (
 
         <div>
-
+          <div>
+            <img src={profileData.data().photo}/>
+          </div>
+      
         </div>
       ))}
+      </div>
     </div>
   );
 }

@@ -64,3 +64,20 @@
    margin-right: 5px;
    
 }
+.profile-content
+{
+    width: 950px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    margin-top: 15px;
+    margin-left: 15%;
+    margin-right: 15%;
+    justify-content:space-evenly;
+
+}
+.profile-content img{
+    width:316px;
+    height:250px
+}
