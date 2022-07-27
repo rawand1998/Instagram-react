@@ -1,6 +1,11 @@
 import React ,{useState}from 'react'
 import './Style.css'
 import Avatar from "@mui/material/Avatar";
+import {
+   
+    FavoriteBorderRounded,
+  
+  } from "@mui/icons-material";
 function Comments({comment,name,avatar,id}) {
  
     const [comments,setComments] = useState(false)
@@ -27,7 +32,9 @@ function Comments({comment,name,avatar,id}) {
             ):<p>{commentInput}</p>}
             {/* <p>{comment}</p> */}
         </div>
-        
+        <div className="fav">
+        <FavoriteBorderRounded className="favorite" />
+        </div>
       
     </div>
   )

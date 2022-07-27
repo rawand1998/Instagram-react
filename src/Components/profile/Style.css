@@ -5,7 +5,8 @@
     justify-content:space-around;
     width: 700px;
     margin-left:22%;
-    margin-top:50px
+    margin-top:50px;
+    background-color: #FAFAFA
  
 }
 .user-image-profile img{
@@ -42,4 +43,8 @@
 }
 .profile-bio span{
     font-weight: bold;
+}
+.profile-highlight{
+    margin-left:15%;
+    margin-top: 15px;
 }

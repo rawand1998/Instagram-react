@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-
+import img from '../../assets/high.PNG'
 import { selectName, selectPhoto } from "../../features/User/UserSlice";
 import { db } from "../../firebase/firebase";
 import Header from "../../Components/Header/Header";
@@ -42,8 +42,11 @@ function Profile() {
               <p>الله سينقذك كما يفعل كل مرة 🤍</p>
             </div>
          </div>
+         
         </div>
-
+        <div className="profile-highlight">
+          <img  src={img}/>
+         </div>
       {profileData.map((profileData) => (
 
         <div></div>

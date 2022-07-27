@@ -1,21 +1,33 @@
 .comment-wrapper{
-
+ align-items:center;
+width:100%;
+display: flex;
+justify-content: space-between;
+background-color:#fff;
 }
 .user-stuff
 {
     display:flex;
-   
+    background-color:#fff;
     height:100%;
     position: relative;
     align-items: center;
-    padding-left:15px
+    padding-left:15px;
+
+}
+.fav{
+    background-color:#fff;
+}
+.favorite {
+    background-color:#fff;
+    margin-right: 15px;
 }
 .user-stuff span{
     margin-left:10px;
     font-weight: bold;
     font-size:15px;
     display:flex;padding: 20px 0;
-   
+    background-color:#fff;
 }
 .user-stuff p {
     margin-left:10px;
@@ -25,7 +37,8 @@
     max-width: 410px;
     flex-wrap: wrap;
     color:rgba(75,85,99,1);
-   padding-top:15px
+   padding-top:15px;
+   background-color:#fff;
 }
 /* div{
     position: relative;
